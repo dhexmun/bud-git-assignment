@@ -1,0 +1,29 @@
+#earth {
+    text-align: center;
+    border: 2px;
+    border-color: black;
+    background-color: aliceblue;
+    border-radius: 50pt;
+    padding-inline-end: 2pt;
+}
+
+.mecury {
+background-color: rgb(194, 84, 65);
+  color: lightcyan;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+p {
+    text-align: center;
+    text-align: justify;
+}
+
+h4 {
+    border: 1px solid black;
+    border-width: 2px;
+    color: rgb(194, 84, 65);
+    border-style: inherit;
+}

@@ -4,11 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BUD - Git tutorial</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-     <h1>Mastering GIT</h1>
+     <h1 id="earth">Mastering GIT</h1>
      <!-- do assignment here -->
-     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque assumenda possimus aliquid aut? Tempore nam deserunt consequatur minus hic aut, tenetur atque quis, alias eaque cum animi facere suscipit quasi.</p>
+     <h2 class="mecury">Notes on some git actions carried out:</h2><br>
+
+     <h4><strong>1) <u>Basic <abbr title="Command Line Interface">CLI;</abbr></u></strong></h4>
+     <ul>
+        <li><b>PWD</b> – use this command for printing your current working directory.</li>
+        <li><b>CD</b> – use this command to change or navigate within directories.</li>
+        <li><b>LS</b> – use this command to list files and folders in your current directory.</li>
+        <li><b>Touch</b> – use this command to create a new file.</li>
+        <li><b>Mkdir</b> – use this command to create a new directory.</li>
+        <li><b>Rm</b> – use this command to delete a file.</li>
+        <li><b>Rm –r</b> – use this command to delete a directory and all its contents.</li>
+        <li><b>Cp</b> – use this command to copy a file from one directory to another.</li>
+        <li><b>Clear</b> – use this command to clear your terminal.</li>
+     </ul>
+
+     <h4><strong>2) <u>Staging and Commits;</u></strong></h4>
+     <p>In order to start using Git properly from your terminal, Git needs to be initialized 
+        and to achieve that, we use the command “git init” after which one can proceed to other 
+        required actions. One of those actions in question is <em>Staging and Committing</em>.</p>
+     <ul>
+        <li>Staging itself is a step before the commit process in Git. Adding a file to the staging 
+            area just simply means letting Git know(track) that those files are ready for 
+            commit. To add a file to the staging area, we simply use “git add (filename)” and 
+            to see files git is tracking simply use "git status".</li>
+        <li>Commits on the other hand are snapshots or milestones of ones projects along the timeline of 
+            Git. They are the basic building blocks of a version control system. So to commit 
+            a file, we simply use “git commit –m (your message)” and to see all your commits 
+            use “git log”.</li>
+     </ul>
+
+     <h4><strong>3) <u>Git Branches;</u></strong></h4>
+     <p>A branch is a version git repository that diverges from the main working 
+        repository, it allows you to move back and forth between different stages of a 
+        project. To create and move to a new branch, we use the command “git checkout –b 
+        (branch-name)” and to see all existing branches, run the command “git branch”.</p>
+     <p>The default branch is usually master or main on most platforms. So if you are 
+        comfortable with the changes you made, switch to the default branch, then 
+        run command “git merge”.</p>
+
+    <h4><strong>4) <u>Creating and Pushing to a Github Repository;</u></strong></h4>
+    <p>In order to have your codes pushed to Github, you need to 
+        first create a Github repository on your Github account and then follow the below essential steps:</p>
+
+        <ul>
+            <li>Generate a new SSH key from your git bash terminal, using the command “ssh-keygen -
+                t ed25519 -C your_email@example.com”.</li>
+            <li> When you're prompted to "Enter a file in which to save the key," press Enter. 
+                This accepts the default file location. At the prompt, you can type a secure passphrase, 
+                or press Enter for no-passphrase.</li>
+            <li>To add the newly generated SSH key to the agent, use the command “eval `ssh-agent -s`” 
+                then “sh-add ~/.ssh/id_rsa”.</li>
+            <li>Copy your key using cat “~/.ssh/id_rsa.pub” and then add this copied key to the 
+                SSH and GPG keys settings of your Github account.</li>
+            <li>Hopping back to your git bash terminal, connect your repository to your local git by 
+                using “git remote add origin (git-repo-link)”.</li>
+            <li>Then finally push to Github using “git push origin”.</li>
+        </ul>
+
+    <h4><strong>5) <u>Forking and cloning;</u></strong></h4>
+    <p>Forking is a Github operation used to clone a repository and its content to 
+        your own Github account. This is usually used when you want to make an 
+        update to an existing repo e.g. when contributing to open source.</p>
+    <p>But cloning on the other hand is a git operation used to clone a repository and its content to your 
+        local machine. To carry out this action, we use the command “git clone (repo-name)”.</p>
+    <p>Also, to merge changes made to a fork to the main repo, one would need to open a 
+        pull request, but with cloning you can push directly to the upstream branch if 
+        you have write access.</p>
+
+    <h4><strong>6) <u>Pull Request;</u></strong></h4>
+    <p>Speaking of pull requests, these are said to be ways to alert a repo's owner(s) that you want to make 
+        some changes to their code. It allows them to review the code first and make sure 
+        it looks good before putting your changes on the primary branch.</p>
 </body>
 </html>
